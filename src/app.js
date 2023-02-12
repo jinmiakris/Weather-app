@@ -1,3 +1,22 @@
+let currentTempInC = 0;
+let showCityTemp = document.querySelector("#display-current-temperature");
+function showFahrenheit(event) {
+  event.preventDefault();
+
+  showCityTemp.innerHTML = `${Math.round(currentTempInC * (9 / 5) + 32)}`;
+}
+
+let temperatureFahrenheit = document.querySelector("#fahrenheit");
+temperatureFahrenheit.addEventListener("click", showFahrenheit);
+
+function showCelcius(event) {
+  event.preventDefault();
+  showCityTemp.innerHTML = `${currentTempInC}`;
+}
+
+let temperatureCelcius = document.querySelector("#celcius");
+temperatureCelcius.addEventListener("click", showCelcius);
+
 function clickSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#type-city");
@@ -11,6 +30,7 @@ function clickSubmit(event) {
   function showCurrentWeatherData(response) {
     console.log(response.data);
     let tempCity = Math.round(response.data.main.temp);
+    currentTempInC = tempCity;
     let showCityTemp = document.querySelector("#display-current-temperature");
     let cityHumidity = response.data.main.humidity;
     let showCityHumidity = document.querySelector("#display-current-humidity");
@@ -24,7 +44,7 @@ function clickSubmit(event) {
     );
     let currentIcon = document.querySelector("#display-current-icon");
 
-    showCityTemp.innerHTML = `${tempCity}ºC`;
+    showCityTemp.innerHTML = `${tempCity}`;
     showCityHumidity.innerHTML = `Humidity: ${cityHumidity}%`;
     showCityWindspeed.innerHTML = `Wind ${cityWindspeed} km/h`;
     showCityWeatherDescription.innerHTML = `${cityWeatherDescription}`;
@@ -59,6 +79,7 @@ function showLocation(event) {
 
       function showGeoWeatherData(response) {
         let tempGeoCity = Math.round(response.data.main.temp);
+        currentTempInC = tempGeoCity;
         let showGeoCity = document.querySelector(
           "#display-current-temperature"
         );
@@ -76,7 +97,7 @@ function showLocation(event) {
         );
         let currentIcon = document.querySelector("#display-current-icon");
 
-        showGeoCity.innerHTML = `${tempGeoCity}ºC`;
+        showGeoCity.innerHTML = `${tempGeoCity}`;
         showCityHumidityGeo.innerHTML = `Humidity: ${cityHumidityGeo}%`;
         showCityWindspeedGeo.innerHTML = `Wind ${cityWindspeedGeo} km/h`;
         showCityWeatherDescriptionGeo.innerHTML = `${cityWeatherDescriptionGeo}`;
@@ -96,3 +117,4 @@ function showLocation(event) {
 }
 let geoButton = document.querySelector("#dispaly-current-bt-location");
 geoButton.addEventListener("click", showLocation);
+geoButton.click();
