@@ -9,6 +9,7 @@ function clickSubmit(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${valueCity}&units=metric`;
 
   function showCurrentWeatherData(response) {
+    console.log(response.data.weather);
     let tempCity = Math.round(response.data.main.temp);
     let showCityTemp = document.querySelector("#display-current-temperature");
     let cityHumidity = response.data.main.humidity;
@@ -21,11 +22,16 @@ function clickSubmit(event) {
     let showCityWeatherDescription = document.querySelector(
       "#display-current-discription"
     );
+    let currentIcon = document.querySelector("#display-current-icon");
 
     showCityTemp.innerHTML = `${tempCity}ºC`;
     showCityHumidity.innerHTML = `Humidity: ${cityHumidity}%`;
     showCityWindspeed.innerHTML = `Wind ${cityWindspeed} km/h`;
     showCityWeatherDescription.innerHTML = `${cityWeatherDescription}`;
+    currentIcon.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showCurrentWeatherData);
@@ -68,11 +74,16 @@ function showLocation(event) {
         let showCityWeatherDescriptionGeo = document.querySelector(
           "#display-current-discription"
         );
+        let currentIcon = document.querySelector("#display-current-icon");
 
         showGeoCity.innerHTML = `${tempGeoCity}ºC`;
         showCityHumidityGeo.innerHTML = `Humidity: ${cityHumidityGeo}%`;
         showCityWindspeedGeo.innerHTML = `Wind ${cityWindspeedGeo} km/h`;
         showCityWeatherDescriptionGeo.innerHTML = `${cityWeatherDescriptionGeo}`;
+        currentIcon.setAttribute(
+          "src",
+          `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+        );
       }
 
       axios
