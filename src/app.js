@@ -9,7 +9,7 @@ function clickSubmit(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${valueCity}&units=metric`;
 
   function showCurrentWeatherData(response) {
-    console.log(response.data.weather);
+    console.log(response.data);
     let tempCity = Math.round(response.data.main.temp);
     let showCityTemp = document.querySelector("#display-current-temperature");
     let cityHumidity = response.data.main.humidity;

@@ -65,6 +65,14 @@ form {
   font-size: 30px;
 }
 
+.unitsTemperature {
+  vertical-align: top;
+  font-size: 70%;
+}
+.unitsTemperature a {
+  color: #fff;
+}
+
 .display-icon {
   position: relative;
   text-align: center;
@@ -82,4 +90,11 @@ form {
   padding: 40px;
   font-weight: bold;
   font-size: large;
+}
+
+.page-footer {
+  position: sticky;
+  text-align: center;
+  top: 100vh;
+  font-size: 12px;
 }
