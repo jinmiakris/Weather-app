@@ -38,6 +38,7 @@ form {
   line-height: 20px;
   background-color: rgba(225, 229, 234, 0.5);
   margin-bottom: 20px;
+  color: #ffff;
 }
 
 .search-bar::placeholder {
@@ -60,19 +61,25 @@ form {
   margin-top: 20px;
 }
 
+.display-temperature {
+  font-size: 30px;
+}
+
 .display-emoji {
   position: relative;
   text-align: center;
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .display-bt-location {
   display: block;
-  margin: 40px auto;
+  margin: 60px auto;
   background: rgba(244, 179, 212, 0.7);
   color: #ffff;
   border-style: none;
   border-radius: 60px;
   padding: 40px;
+  font-weight: bold;
+  font-size: large;
 }

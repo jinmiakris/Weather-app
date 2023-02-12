@@ -18,7 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Amazing weather</title>
   </head>
   <body>
@@ -30,7 +32,7 @@
 
         <hr />
 
-        <form>
+        <form class="search-city" id="display-search-city">
           <div class="row">
             <div class="col-9">
               <input
@@ -53,38 +55,31 @@
           </div>
         </form>
         <hr />
-        <div class="display-weather-data" id="display-current-weather-data"></div>
-          <div class="row align-items-center">
-          
-            <div class="col-6">
-              <div class="display-city" id="display-current-city">
-                Current city
+        <div
+          class="display-weather-data"
+          id="display-current-weather-data"
+        ></div>
+        <div class="row align-items-center">
+          <div class="col-6">
+            <div class="display-city" id="display-current-city">Copenhagen</div>
+            <div class="display-weather-units" id="display-current-units">
+              <div class="display-temperature" id="display-current-temperature">
+                7ºC
               </div>
-              <div class="display-weather-units" id="display-current-units">
-                <div
-                  class="display-temperature"
-                  id="display-current-temperature"
-                >
-                  7ºC
-                </div>
-                <div class="display-humidity" id="display-current-humidity">
-                  80%
-                </div>
-                <div class="display-windspeed" id="display-current-windspeed">
-                  6km/h
-                </div>
-                <div
-                  class="display-despription"
-                  id="display-current-discription"
-                >
-                  Foggy
-                </div>
+              <div class="display-humidity" id="display-current-humidity">
+                Humidity: 80%
+              </div>
+              <div class="display-windspeed" id="display-current-windspeed">
+                Wind: 6km/h
+              </div>
+              <div class="display-despription" id="display-current-discription">
+                Foggy
               </div>
             </div>
+          </div>
 
-            <div class="col-6">
-              <div class="display-emoji" id="display-current-emoji">☀️</div>
-            </div>
+          <div class="col-6">
+            <div class="display-emoji" id="display-current-emoji">☀️</div>
           </div>
         </div>
         <button class="display-bt-location" id="dispaly-current-bt-location">
