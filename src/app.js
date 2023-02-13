@@ -50,7 +50,7 @@ function clickSubmit(event) {
     showCityWeatherDescription.innerHTML = `${cityWeatherDescription}`;
     currentIcon.setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   }
 
@@ -103,7 +103,7 @@ function showLocation(event) {
         showCityWeatherDescriptionGeo.innerHTML = `${cityWeatherDescriptionGeo}`;
         currentIcon.setAttribute(
           "src",
-          `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+          `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
         );
       }
 
