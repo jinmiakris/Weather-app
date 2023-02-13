@@ -67,7 +67,7 @@ function showLocation(event) {
     let lon = position.coords.longitude.toFixed(2);
 
     let apiKeyGeo = "6a48a550fc04f170639e60d52b8a6bc5";
-    let apiUrlGeo = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5`;
+    let apiUrlGeo = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5`;
 
     function showGeoCity(response) {
       let geoCity = response.data[0].name;
