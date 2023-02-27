@@ -54,25 +54,20 @@
         </form>
         <div class="row align-items-center">
           <div class="col-6">
-            <span class="display-city" id="display-current-city"
-              >Copenhagen</span
-            >
+            <span class="display-city" id="display-current-city"></span>
             <div class="display-weather-units" id="display-current-units">
-              <div class="display-humidity" id="display-current-humidity">
-                Humidity: 80%
+              <div class="display-humidity">
+                Humidity: <span id="display-current-humidity"></span>%
               </div>
-              <div class="display-windspeed" id="display-current-windspeed">
-                Wind: 6km/h
+              <div class="display-windspeed">
+                Wind: <span id="display-current-windspeed"></span>km/h
               </div>
               <div class="display-despription" id="display-current-discription">
                 Foggy
               </div>
               <div class="display-temperature">
-                <span id="display-current-temperature">7</span>
-                <span class="unitsTemperature">
-                  <a href="#" id="celcius">ºC</a> |
-                  <a href="#" id="fahrenheit">ºF</a>
-                </span>
+                <span id="display-current-temperature"></span>
+                <span class="unitsTemperature"> ºC </span>
               </div>
             </div>
           </div>
@@ -91,23 +86,8 @@
             </div>
           </div>
         </div>
-        <div class="weather-forecast">
-          <div class="row">
-            <div class="col-2">
-              <div class="forecast-date">Thu</div>
-              <img
-                src="https://openweathermap.org/img/wn/01d@2x.png"
-                alt=""
-                width="42"
-              />
 
-              <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max"> 18º </span>
-                <span class="weather-forecast-temperature-min"> 12º </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="weather-forecast" id="display-weather-forecast"></div>
       </div>
     </div>
     <footer class="page-footer">
