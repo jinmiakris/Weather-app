@@ -75,6 +75,10 @@ form {
   font-size: 50px;
   margin-top: 20px;
 }
+
+.weather-forecast {
+  margin-top: 40px;
+}
 .page-footer {
   position: sticky;
   text-align: center;
