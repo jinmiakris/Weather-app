@@ -30,8 +30,6 @@
           <h1>IT'S WEATHER TIME</h1>
         </div>
 
-        <hr />
-
         <form class="search-city" id="display-search-city">
           <div class="row">
             <div class="col-9">
@@ -54,23 +52,12 @@
             </div>
           </div>
         </form>
-        <hr />
-        <div
-          class="display-weather-data"
-          id="display-current-weather-data"
-        ></div>
         <div class="row align-items-center">
           <div class="col-6">
-            <div class="display-city" id="display-current-city">Copenhagen</div>
+            <span class="display-city" id="display-current-city"
+              >Copenhagen</span
+            >
             <div class="display-weather-units" id="display-current-units">
-              <div class="display-temperature">
-                <span id="display-current-temperature">7</span>
-                <span class="unitsTemperature">
-                  <a href="#" id="celcius">ºC</a> |
-                  <a href="#" id="fahrenheit">ºF</a>
-                </span>
-              </div>
-
               <div class="display-humidity" id="display-current-humidity">
                 Humidity: 80%
               </div>
@@ -80,22 +67,32 @@
               <div class="display-despription" id="display-current-discription">
                 Foggy
               </div>
-            </div>
+              <div class="display-temperature">
+              <span id="display-current-temperature">7</span>
+                <span class="unitsTemperature">
+                    <a href="#" id="celcius">ºC</a> |
+                    <a href="#" id="fahrenheit">ºF</a>
+                </span>
+              </div>
           </div>
-
-          <div class="col-6">
-            <div class="display-icon">
-              <img
-                id="display-current-icon"
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt=""
-              />
-            </div>
-          </div>
+          
+          
         </div>
-        <button class="display-bt-location" id="dispaly-current-bt-location">
-          Locate me
-        </button>
+        <div class="col-6">
+          <div class="nauk-info-connections">
+          <div class="display-current-temp-collum">
+            <span class="display-icon">
+                  <img
+                    id="display-current-icon"
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt=""
+                  />
+            </span>
+
+            
+            </div>
+          </div>
+          </div>
       </div>
     </div>
     <footer class="page-footer">
